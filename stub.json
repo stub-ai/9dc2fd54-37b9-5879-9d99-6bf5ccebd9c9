@@ -1,0 +1,1 @@
+{"config":{"system_prompt":"","model":"","temperature":0,"top_p":1,"framework":"nextjs-page-tailwind"},"prompts":[{"prompt":"I need an Autohotkey script that activates if the mouse has not moved for 5 minutes.","md5":"28fa6e10315d227404099e599a3c099b"}]}
