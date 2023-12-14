@@ -2,20 +2,20 @@
 
 SetTimer, Check, 300000 ; 5 minutes in milliseconds
 
-MouseGetPos, X0, Y0
+MouseGetPos, X, Y
 return
 
 Check:
-MouseGetPos, X1, Y1
-if (X0 = X1 and Y0 = Y1)
+MouseGetPos, NewX, NewY
+if (NewX = X and NewY = Y)
 {
-    ; Mouse has not moved, perform your action here
-    MsgBox, Mouse has not moved for 5 minutes.
+    ; Mouse hasn't moved, perform your action here
+    MsgBox, Mouse hasn't moved for 5 minutes.
 }
 else
 {
-    ; Mouse has moved, update the initial position
-    X0 := X1
-    Y0 := Y1
+    ; Mouse has moved, update the position
+    X := NewX
+    Y := NewY
 }
 return
