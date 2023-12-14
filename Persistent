@@ -1,0 +1,21 @@
+; AutoHotkey script
+
+SetTimer, Check, 300000 ; 5 minutes in milliseconds
+
+MouseGetPos, X0, Y0
+return
+
+Check:
+MouseGetPos, X1, Y1
+if (X0 = X1 and Y0 = Y1)
+{
+    ; Mouse has not moved, perform your action here
+    MsgBox, Mouse has not moved for 5 minutes.
+}
+else
+{
+    ; Mouse has moved, update the initial position
+    X0 := X1
+    Y0 := Y1
+}
+return
